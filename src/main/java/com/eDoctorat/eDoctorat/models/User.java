@@ -2,6 +2,7 @@ package com.eDoctorat.eDoctorat.models;
 
 import java.util.Date;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -53,6 +54,6 @@ public class User {
     @Temporal(TemporalType.TIMESTAMP)
     private Date date_joined;
 
-    @OneToOne(mappedBy = "user")
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private Candidat candidat;
 }

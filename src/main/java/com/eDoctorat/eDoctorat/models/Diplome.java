@@ -1,16 +1,19 @@
 package com.eDoctorat.eDoctorat.models;
 
-import java.util.Date;
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import lombok.Data;
 
 @Entity
-@Data // Lombok annotation for generating getters, setters, and toString
+@Data 
 public class Diplome {
 
     @Id
@@ -27,6 +30,13 @@ public class Diplome {
     private String province;
     private String moyen_generale;
     private String candidat_id;
+
+    @ManyToOne
+    @JoinColumn(name = "candidat_id")
+    private Candidat candidat;
+
+    @OneToMany(mappedBy = "diplome", cascade = CascadeType.ALL)
+    private List<Annexe> annexes;
     
 
 }
