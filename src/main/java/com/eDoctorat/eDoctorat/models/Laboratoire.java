@@ -10,7 +10,7 @@ import jakarta.persistence.OneToOne;
 import lombok.Data;
 
 @Entity
-@Data // Lombok annotation for generating getters, setters, and toString
+@Data
 public class Laboratoire {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,8 +22,6 @@ public class Laboratoire {
     private String ced_id;
     private String directeur_id;
     private String etablissement_id;
-
-
 
 
 }
