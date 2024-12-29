@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.eDoctorat.eDoctorat.models.Laboratoire;
 
+
 @Repository
 public interface LaboratoireRepository extends JpaRepository<Laboratoire, Long> {
   

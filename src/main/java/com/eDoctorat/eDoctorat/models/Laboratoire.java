@@ -11,7 +11,7 @@ import lombok.Data;
 
 @Entity
 @Data // Lombok annotation for generating getters, setters, and toString
-public class laboratoire {
+public class Laboratoire {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
