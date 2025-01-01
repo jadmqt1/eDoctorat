@@ -1,7 +1,11 @@
 package com.eDoctorat.eDoctorat.models;
 
+<<<<<<< HEAD
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
+=======
+
+>>>>>>> 05e06f2da77a258ec02617e7adb161694164b7e7
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

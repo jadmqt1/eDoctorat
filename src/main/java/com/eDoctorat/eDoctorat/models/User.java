@@ -56,7 +56,11 @@ public class User {
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private Candidat candidat;
+<<<<<<< HEAD
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private Professeur professeur;
 }
+=======
+}
+>>>>>>> 05e06f2da77a258ec02617e7adb161694164b7e7
