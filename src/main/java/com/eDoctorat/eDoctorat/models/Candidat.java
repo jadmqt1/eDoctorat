@@ -93,4 +93,7 @@ public class Candidat {
 
     @OneToMany(mappedBy = "candidat", cascade = CascadeType.ALL)
     private List<Diplome> diplomes;
+
+    @OneToMany(mappedBy = "candidat", cascade = CascadeType.ALL)
+    private List<Examiner> examiners;
   }

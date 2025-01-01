@@ -38,19 +38,25 @@ public class Sujet {
     @JoinColumn(name = "coDirecteur_id", nullable = true)
     private Professeur coDirecteur;
 
+    //formationDoctorale
     @ManyToOne
     @JoinColumn(name = "formationDoctorale_id", nullable = false)
     private FormationDoctorale formationDoctorale;
 
-
+    // postuler
     @OneToMany(mappedBy = "sujet", cascade = CascadeType.ALL)
     private List<Postuler> postules;
 
-
+    // inscription
     @OneToMany(mappedBy = "sujet", cascade = CascadeType.ALL)
     private List<Inscription> inscriptions;
 
+    // notification
     @OneToMany(mappedBy = "sujet_notification", cascade = CascadeType.ALL)
     private List<Notification> notifications;
+
+    // examiner
+    @OneToMany(mappedBy = "sujet", cascade = CascadeType.ALL)
+    private List<Examiner> examiners;
 
 }
