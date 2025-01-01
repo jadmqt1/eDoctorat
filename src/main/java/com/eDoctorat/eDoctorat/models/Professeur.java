@@ -51,17 +51,17 @@ public class Professeur {
 
     @ManyToOne
     @JoinColumn(name = "labo_id", nullable = true)
-    private Laboratoire labo;
+    private Laboratoire laboratoire;
 
     @OneToOne
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    @OneToOne(mappedBy = "professeur", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "directeur", cascade = CascadeType.ALL)
     private Ced ced;
-    
+
     @OneToMany(mappedBy = "professeur", cascade = CascadeType.ALL)
-    private List<Commission> commissions;
+    private List<ComissionProfesseur> comissionProfesseurs;
 }
 
 

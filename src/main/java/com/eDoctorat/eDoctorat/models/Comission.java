@@ -17,14 +17,14 @@ import java.util.List;
 @Entity
 
 @Data
-public class Commission {
+public class Comission {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
-    private Date dateCommision;
+    private Date dateComision;
 
     @Column(length = 255, nullable = false)
     private String lieu;
@@ -36,6 +36,7 @@ public class Commission {
     @JoinColumn(name = "labo_id", nullable = false, referencedColumnName = "id")
     private Laboratoire laboratoire;
 
-    @OneToMany(mappedBy = "commission")
+    @OneToMany(mappedBy = "comission")
     private List<ComissionProfesseur> comissionProfesseurs;
+    
 }

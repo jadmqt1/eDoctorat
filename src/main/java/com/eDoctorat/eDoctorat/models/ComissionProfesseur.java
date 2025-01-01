@@ -24,12 +24,13 @@ public class ComissionProfesseur {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "commission_id", nullable = false)
-    private Commission commission;
+    @JoinColumn(name = "comission_id", nullable = false)
+    private Comission comission;
 
     @ManyToOne
     @JoinColumn(name = "professeur_id", nullable = false)
     private Professeur professeur;
+
 
 
 }
