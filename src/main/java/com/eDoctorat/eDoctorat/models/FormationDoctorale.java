@@ -43,7 +43,7 @@ public class FormationDoctorale {
     private Ced ced;
 
     @ManyToOne
-    @JoinColumn(name = "etablissement_id", referencedColumnName = "id", nullable = true)
+    @JoinColumn(name = "etablissement_id", referencedColumnName = "idEtablissement", nullable = true)
     private Etablissement etablissement;
 }
 

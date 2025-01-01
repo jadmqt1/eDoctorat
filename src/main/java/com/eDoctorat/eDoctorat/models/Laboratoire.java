@@ -27,7 +27,7 @@ public class Laboratoire {
 
 
     @ManyToOne
-    @JoinColumn(name = "etablissement_id", nullable = false)
+    @JoinColumn(name = "etablissement_id", referencedColumnName = "idEtablissement", nullable = false)
     private Etablissement etablissement;
 
     @OneToMany(mappedBy = "laboratoire", cascade = CascadeType.ALL)
