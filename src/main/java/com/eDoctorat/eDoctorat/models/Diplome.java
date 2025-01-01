@@ -29,7 +29,6 @@ public class Diplome {
     private String ville;
     private String province;
     private String moyen_generale;
-    private String candidat_id;
 
     @ManyToOne
     @JoinColumn(name = "candidat_id")

@@ -17,8 +17,6 @@ public class Annexe {
     private String type;
     private String pathFile;
     private String Diplome_id;
-
-
       
     @ManyToOne
     @JoinColumn(name = "diplome_id")

@@ -84,7 +84,7 @@ public class Candidat {
     @JoinColumn(name = "pays_id", nullable = false)
     private Pays pays;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id", nullable = false)
     private User user;
 
