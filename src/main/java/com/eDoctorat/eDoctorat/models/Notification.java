@@ -26,7 +26,7 @@ public class Notification {
 
     @ManyToOne
     @JoinColumn(name = "commission_id", nullable = false)
-    public Commission commission_notification;
+    public Comission commission_notification;
 
     @ManyToOne
     @JoinColumn(name = "sujet_id", nullable = false)
