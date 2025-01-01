@@ -17,7 +17,7 @@ import lombok.Data;
 
 
 @Entity() 
-@Data 
+@Data
 public class Professeur {
 
     @Id
@@ -61,11 +61,7 @@ public class Professeur {
     private Ced ced;
 
     @OneToMany(mappedBy = "professeur", cascade = CascadeType.ALL)
-    private List<Sujet> sujets;
-
-    @OneToMany(mappedBy = "coDirecteur", cascade = CascadeType.ALL)
-    private List<Sujet> SujetCoDirected;
-
+    private List<ComissionProfesseur> comissionProfesseurs;
 }
 
 
