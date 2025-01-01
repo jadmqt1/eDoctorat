@@ -4,8 +4,8 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.eDoctorat.hellowoeld.models.Candidat;
-import com.eDoctorat.hellowoeld.repositories.CandidatRepository;
+import com.eDoctorat.eDoctorat.models.Candidat;
+import com.eDoctorat.eDoctorat.repositories.CandidatRepository;
 
 import java.util.List;
 import java.util.Optional;

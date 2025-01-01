@@ -22,11 +22,6 @@ public class Etablissement {
     @OneToMany(mappedBy = "etablissement", cascade = CascadeType.ALL)
     private List<Laboratoire> laboratoires;
 
-<<<<<<< HEAD
-    @OneToMany(mappedBy = "etablissement", cascade = CascadeType.ALL)
-    private List<Professeur> professeurs;
-=======
     @OneToMany(mappedBy = "etablissement")
     private List<FormationDoctorale> formationDoctorales;
->>>>>>> 05e06f2da77a258ec02617e7adb161694164b7e7
 }
