@@ -1,5 +1,7 @@
 package com.eDoctorat.eDoctorat.models;
 
+import java.util.List;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -8,6 +10,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import lombok.Data;
 
@@ -48,14 +51,21 @@ public class Professeur {
 
     @ManyToOne
     @JoinColumn(name = "labo_id", nullable = true)
-    private Laboratoire labo;
+    private Laboratoire laboratoire;
 
     @OneToOne
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    @OneToOne(mappedBy = "professeur", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "directeur", cascade = CascadeType.ALL)
     private Ced ced;
+
+    @OneToMany(mappedBy = "professeur", cascade = CascadeType.ALL)
+    private List<Sujet> sujets;
+
+    @OneToMany(mappedBy = "coDirecteur", cascade = CascadeType.ALL)
+    private List<Sujet> SujetCoDirected;
+
 }
 
 
