@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
 
 
@@ -16,9 +18,21 @@ public class Notification {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
   private String type;
-  private int candidat_id;
-  private int commission_id;
-  private int sujet_id;
+
+  
+    @ManyToOne
+    @JoinColumn(name = "candidat_id", nullable = false)
+    private Candidat candidat_notification;
+
+    @ManyToOne
+    @JoinColumn(name = "commission_id", nullable = false)
+    public Commission commission_notification;
+
+    @ManyToOne
+    @JoinColumn(name = "sujet_id", nullable = false)
+    public Sujet sujet_notification;
+
+
 
 
 }

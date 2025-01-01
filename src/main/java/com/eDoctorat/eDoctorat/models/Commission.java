@@ -22,6 +22,9 @@ public class Commission {
   private int heure;
   private int labo_id;
 
+  
+
+
 }
 
 

@@ -6,11 +6,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
 
 @Entity
-@Data // Lombok annotation for generating getters, setters, and toString
+@Data 
 public class Inscription {
 
     @Id
@@ -19,6 +19,12 @@ public class Inscription {
     public Date dateDisposeDossier;
     public String remarque;
     public boolean valider;
-    public String condidat_id;
-    public String sujet_id;
+  
+    @ManyToOne
+    @JoinColumn(name = "candidat_id", nullable = false)
+    private Candidat candidat_inscription;
+
+    @ManyToOne
+    @JoinColumn(name = "sujet_id", nullable = false)
+    public Sujet sujet;
 }
